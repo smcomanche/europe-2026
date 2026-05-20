@@ -14,7 +14,7 @@ const TRIP = {
   lodging: [
     { city: "London", name: "Airbnb — Pimlico", address: "10A Winchester Street, SW1V 4ND", dates: "Jul 9–13", icon: "🏠" },
     { city: "Paris", name: "Airbnb — Latin Quarter", address: "3 Rue Hautefeuille, 75006", dates: "Jul 13–16", icon: "🏠" },
-    { city: "London", name: "The Megaro Hotel", address: "1 Belgrove St, WC1H 8AB", dates: "Jul 16–17", icon: "🏨" },
+    { city: "London", name: "The Megaro Hotel", address: "1 Belgrove St, WC1H 8AG", dates: "Jul 16–17", icon: "🏨" },
   ],
 };
 
@@ -22,7 +22,7 @@ const DAYS = [
   {
     day: 0, date: "2026-07-08", weekday: "Wednesday", city: "Denver → London", emoji: "✈️", theme: "travel",
     events: [
-      { time: "5:35 PM", title: "UA 262 departs DEN → LHR", detail: "Seats: Shawn 43B, Susan 43A, Charlotte 44A, Gabriella 44B", type: "travel", icon: "✈️" },
+      { time: "5:35 PM", title: "UA 27 departs DEN → LHR", detail: "Confirmation EP2FHY. Seats: Shawn 43B, Susan 43A, Charlotte 44A, Gabriella 44B", type: "travel", icon: "✈️", tag: "BOOKED ✓" },
       { time: "", title: "Overnight flight — try to sleep!", detail: "Arrive +1 day. Set watches to London time (GMT+1) on boarding.", type: "travel", icon: "💡" },
     ]
   },
@@ -30,8 +30,8 @@ const DAYS = [
     day: 1, date: "2026-07-09", weekday: "Thursday", city: "Arrive London", emoji: "🇬🇧", theme: "london",
     events: [
       { time: "9:40 AM", title: "Arrive London Heathrow T2", detail: "Collect bags, clear UK immigration (have ETA ready on phone)", type: "travel", icon: "🛬" },
-      { time: "11:00 AM", title: "National Express bus LHR T2 → Victoria Coach Stn", detail: "~45 min ride. Luggage included if pre-booked.", type: "travel", icon: "🚌", tag: "BOOKED ✓" },
-      { time: "12:00 PM", title: "Walk to Pimlico Airbnb (10A Winchester St, SW1V)", detail: "10-min walk from Victoria. Drop bags — check-in may be later.", type: "lodging", icon: "🏠" },
+      { time: "11:15 AM", title: "National Express NX 030 → Victoria Coach Stn", detail: "Ticket EUYBZY76. Departs 11:15 LHR T2/T3, arrives 12:20 Victoria. ~1h 5m, no changes. Seats 3C, 3D, 4D, 4C. Luggage included.", type: "travel", icon: "🚌", tag: "BOOKED ✓" },
+      { time: "12:30 PM", title: "Walk to Pimlico Airbnb (10A Winchester St, SW1V 4ND)", detail: "10-min walk from Victoria. Host: Gurvinder (+44 7740 150590). Check-in after 4 PM — drop bags only. Confirmation HMNXKBHZ4D.", type: "lodging", icon: "🏠" },
       { time: "1:00 PM", title: "Lunch near Pimlico / Victoria", detail: "Grab a bite — nothing fancy, keep it easy.", type: "food", icon: "🍽️" },
       { time: "2:00 PM", title: "Walk: Big Ben → Parliament → Westminster Bridge", detail: "Stay outdoors to fight jet lag! Great first views of London.", type: "activity", icon: "🏛️", tag: "FREE" },
       { time: "3:30 PM", title: "Stroll St. James's Park → Buckingham Palace (exterior)", detail: "Relax in the park. See the Palace facade — save Guard for tomorrow.", type: "activity", icon: "👑", tag: "FREE" },
@@ -42,11 +42,11 @@ const DAYS = [
   {
     day: 2, date: "2026-07-10", weekday: "Friday", city: "Westminster & West End", emoji: "🇬🇧", theme: "london",
     events: [
-      { time: "9:00 AM", title: "★ Westminster Abbey (timed entry)", detail: "Book 9:00 AM slot. Allow 1.5-2 hrs. Audio guide included.", type: "activity", icon: "⛪", tag: "BOOKED ✓" },
+      { time: "9:00 AM", title: "★ Westminster Abbey (timed entry)", detail: "Confirmation #1148783. 4 tickets, £62 total. Allow 1.5-2 hrs. Audio guide included.", type: "activity", icon: "⛪", tag: "BOOKED ✓" },
       { time: "10:45 AM", title: "Walk to Buckingham Palace (10 min)", detail: "Arrive 45-60 min early for good spot at railings or Victoria Memorial.", type: "activity", icon: "👑" },
       { time: "11:00 AM", title: "★ Changing of the Guard", detail: "FRIDAY = ceremony day! 45 min. Free, no tickets. Arrive by 10:15.", type: "activity", icon: "💂", tag: "FREE" },
       { time: "12:00 PM", title: "Lunch: picnic in St. James's Park or café nearby", detail: "Grab sandwiches from a Pret or M&S Food nearby.", type: "food", icon: "🥪" },
-      { time: "1:30 PM", title: "★ Churchill War Rooms (timed entry)", detail: "Book 1:30 PM slot. Allow 1.5-2 hrs. Kids enjoy the interactive table.", type: "activity", icon: "🏛️", tag: "BOOKED ✓" },
+      { time: "1:30 PM", title: "★ Churchill War Rooms (timed entry)", detail: "Order ref D7MNG3R97. Allow 1.5-2 hrs. Kids enjoy the interactive table.", type: "activity", icon: "🏛️", tag: "BOOKED ✓" },
       { time: "3:30 PM", title: "Rick Steves Westminster Walk → Trafalgar Square", detail: "Download RS Audio Europe app. Walk passes Downing St, Whitehall, etc.", type: "activity", icon: "🎧", tag: "FREE (app)" },
       { time: "4:00 PM", title: "★ National Gallery", detail: "Free entry, no ticket needed. See Van Gogh, Monet, da Vinci. 1-2 hrs.", type: "activity", icon: "🎨", tag: "FREE" },
       { time: "6:00 PM", title: "Pre-show dinner in Soho or Covent Garden", detail: "Book a restaurant near the theatre. Leicester Sq area.", type: "food", icon: "🍽️" },
@@ -82,9 +82,9 @@ const DAYS = [
     events: [
       { time: "7:30 AM", title: "Check out Pimlico Airbnb", detail: "Final bag check. Tube: Pimlico → King's Cross St. Pancras (Victoria Line, direct).", type: "travel", icon: "🧳" },
       { time: "8:30 AM", title: "Arrive St. Pancras — clear Eurostar security/border", detail: "Arrive 60+ min early. UK exit + French entry (EES biometrics). Allow extra time.", type: "travel", icon: "🔒" },
-      { time: "9:31 AM", title: "★ Eurostar departs St. Pancras → Paris Gare du Nord", detail: "2h28 ride. Relax, enjoy the Channel Tunnel crossing!", type: "travel", icon: "🚄", tag: "BOOKED ✓" },
+      { time: "9:31 AM", title: "★ Eurostar departs St. Pancras → Paris Gare du Nord", detail: "Booking ref 2060423. Arrives 12:59 Paris time. Relax, enjoy the Channel Tunnel crossing!", type: "travel", icon: "🚄", tag: "BOOKED ✓" },
       { time: "12:59 PM", title: "Arrive Gare du Nord (Paris time, +1 hr)", detail: "Métro Line 4 → Saint-Michel (4 stops, ~10 min) to Airbnb area.", type: "travel", icon: "🛬" },
-      { time: "1:30 PM", title: "Drop bags at Paris Airbnb (3 Rue Hautefeuille, 75006)", detail: "Latin Quarter / Saint-Michel area. Amazing location for walking!", type: "lodging", icon: "🏠" },
+      { time: "1:30 PM", title: "Drop bags at Paris Airbnb (3 Rue Hautefeuille, 75006)", detail: "Host: Emon (+33 6 66 76 59 25). Confirmation HMREWYM3QS. Check-in after 11 AM. Latin Quarter / Saint-Michel area.", type: "lodging", icon: "🏠" },
       { time: "2:00 PM", title: "Lunch in the Latin Quarter", detail: "Crêperie or café on Rue de la Huchette. Welcome to Paris!", type: "food", icon: "🍽️" },
       { time: "3:00 PM", title: "★ Rick Steves Historic Paris Walk", detail: "Start at Notre-Dame → Île de la Cité → cross to Latin Quarter.", type: "activity", icon: "🎧", tag: "FREE (app)" },
       { time: "3:30 PM", title: "★ Notre-Dame Cathedral (exterior + interior)", detail: "FREE. Book timed slot 2 days ahead on notredamedeparis.fr. Towers TBD.", type: "activity", icon: "⛪", tag: "FREE (book slot)" },
@@ -116,7 +116,7 @@ const DAYS = [
   {
     day: 7, date: "2026-07-15", weekday: "Wednesday", city: "Louvre, Orsay & Eiffel Tower", emoji: "🇫🇷", theme: "paris",
     events: [
-      { time: "9:00 AM", title: "★ Louvre Museum (timed entry — 9:00 AM slot)", detail: "Book on louvre.fr. Use Rick Steves audio tour. See Mona Lisa, Venus, Nike.", type: "activity", icon: "🖼️", tag: "BOOK AHEAD" },
+      { time: "9:00 AM", title: "★ Louvre Museum (timed entry — 9:00 AM slot)", detail: "Order C261370013715, €64. Use Rick Steves audio tour. See Mona Lisa, Venus, Nike.", type: "activity", icon: "🖼️", tag: "BOOKED ✓" },
       { time: "", title: "", detail: "RS tip: Don't try to see everything. Follow RS \"best of\" tour ~2.5 hrs.", type: "tip", icon: "💡" },
       { time: "12:00 PM", title: "Walk through Tuileries Garden", detail: "Beautiful stroll from Louvre toward Place de la Concorde.", type: "activity", icon: "🌳", tag: "FREE" },
       { time: "12:30 PM", title: "Lunch near Tuileries or Rue de Rivoli", detail: "", type: "food", icon: "🍽️" },
@@ -125,7 +125,7 @@ const DAYS = [
       { time: "6:00 PM", title: "Walk Champs-Élysées → Trocadéro for Eiffel Tower views", detail: "Best Eiffel Tower photo spot. Golden hour lighting.", type: "activity", icon: "🚶", tag: "FREE" },
       { time: "", title: "", detail: "Opens ~May 16 for Jul 15. Summit sells out in HOURS. Set a reminder!", type: "tip", icon: "💡" },
       { time: "10:00 PM", title: "Dinner in the 7th or walk back to Latin Quarter", detail: "Rue Cler area has great restaurants if near Eiffel Tower.", type: "food", icon: "🍽️" },
-      { time: "11:00 PM", title: "★ Eiffel Tower (evening ascent — book for ~11 PM)", detail: "Sunset from the top! Book summit tickets 60 days ahead on toureiffel.paris.", type: "activity", icon: "🗼", tag: "BOOKED ✓" },
+      { time: "11:00 PM", title: "★ Eiffel Tower — summit ascent (11:00 PM)", detail: "Order ref 20495509466a0b11b12aaeb, €70.60 / $87.52. Sunset/night views from the top!", type: "activity", icon: "🗼", tag: "BOOKED ✓" },
     ]
   },
   {
@@ -136,9 +136,9 @@ const DAYS = [
       { time: "11:30 AM", title: "Last Paris lunch", detail: "Savor it — boulangerie, bistro, or crêperie!", type: "food", icon: "🍽️" },
       { time: "1:00 PM", title: "Return to Airbnb — grab luggage", detail: "Checkout 18:00 but you need to leave by 14:30. Arrange early luggage pickup with host or use luggage storage (Nannybag near Gare du Nord).", type: "lodging", icon: "🧳" },
       { time: "2:30 PM", title: "Métro to Gare du Nord (Line 4 from Saint-Michel, ~15 min)", detail: "Arrive 90 min before departure for security + border control.", type: "travel", icon: "🚇" },
-      { time: "4:02 PM", title: "★ Eurostar departs Gare du Nord → London St. Pancras", detail: "", type: "travel", icon: "🚄", tag: "BOOKED ✓" },
+      { time: "4:02 PM", title: "★ Eurostar departs Gare du Nord → London St. Pancras", detail: "Booking ref 2060423. Arrives St. Pancras 17:35 London time.", type: "travel", icon: "🚄", tag: "BOOKED ✓" },
       { time: "5:35 PM", title: "Arrive St. Pancras (London time, -1 hr)", detail: "Walk across the street to The Megaro Hotel. 1 minute!", type: "travel", icon: "🛬" },
-      { time: "6:00 PM", title: "Check in — The Megaro Hotel (1 Belgrove St)", detail: "2x Standard Double rooms. £603.50 total.", type: "lodging", icon: "🏨", tag: "BOOK AHEAD" },
+      { time: "6:00 PM", title: "Check in — The Megaro Hotel (1 Belgrove St, WC1H 8AG)", detail: "Booking DBM45482379143100. 2× Standard Double, £603.50 paid. Check-in opens 3 PM, checkout by 11 AM Jul 17.", type: "lodging", icon: "🏨", tag: "BOOKED ✓" },
       { time: "7:00 PM", title: "Farewell dinner — hotel restaurant or King's Cross area", detail: "The Megaro has an Italian restaurant. Or explore nearby options.", type: "lodging", icon: "🍽️" },
     ]
   },
@@ -157,7 +157,7 @@ const DAYS = [
 
 const TODO_ITEMS = [
   { priority: "NOW", text: "Tower of London tickets", detail: "hrp.org.uk — Book online for discount + skip ticket line. Jul 12 AM.", link: "https://hrp.org.uk", status: "todo" },
-  { priority: "NOW", text: "Book The Megaro Hotel (Jul 16)", detail: "2x Standard Double, £603.50. themegaro.co.uk", link: "https://themegaro.co.uk", status: "todo" },
+  { priority: "DONE", text: "The Megaro Hotel (Jul 16)", detail: "Booking DBM45482379143100. 2× Standard Double, £603.50 paid. Check-in 3 PM, checkout by 11 AM.", link: "https://themegaro.co.uk", status: "done" },
   { priority: "2-4 WKS", text: "Sainte-Chapelle timed entry", detail: "sainte-chapelle.fr — Book ahead to skip 60-90 min July lines.", link: "https://sainte-chapelle.fr", status: "todo" },
   { priority: "2-4 WKS", text: "Musée d'Orsay timed entry", detail: "musee-orsay.fr — Closed Mondays. Book AM slot. €16/adult.", link: "https://musee-orsay.fr", status: "todo" },
   { priority: "2-4 WKS", text: "St. Paul's Cathedral tickets", detail: "stpauls.co.uk — £18 online (£20 walk-up). Or attend a free service.", link: "https://stpauls.co.uk", status: "todo" },
